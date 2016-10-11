@@ -1,2 +1,2 @@
-# C-in-Depth
-C# in Depth
+# Web Scraping with Python
+Collecting Data from the Modern Web
