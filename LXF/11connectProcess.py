@@ -33,5 +33,6 @@ if __name__ == '__main__':
     # 等待pw结束
     pw.join()
     # pr进程里是死循环，无法等待其结束，只能强行终止：
+    # 加了一行
     pr.terminate()
     
