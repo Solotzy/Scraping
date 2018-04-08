@@ -34,5 +34,19 @@ def reindex(analysisSettings={}, mappingSettings={}, movieDict={}):
     
     resp = requests.post("http://localhost:9200/_bulk", data=bulkMovies)
 
+mappingSettings = {
+    "movie": {
+        "properties": {
+            "title": {
+                "type": "string",
+                "analyzer": "english"
+            },
+            "overview": {
+                "type": "string",
+                "analyzer": "english"
+            }
+        }
+    }
+}
 movieDict = extract()
-reindex(movieDict=movieDict)
+reindex(mappingSettings=mappingSettings,movieDict=movieDict)
